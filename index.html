@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramoware - Portfolio</title>
+
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+      <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+          <div class="floating mb-8">
+            <div class="w-32 h-32 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-6 overflow-hidden">
+              <img src="assets/me.png" alt="My Avatar" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">
+              Hi, I'm <span class="text-yellow-300">RamDEV!</span>
+          </h1>
+          <div class="text-xl md:text-2xl mb-8 h-16">
+              <span id="typing-text" class="typing-animation"></span>
+          </div>
+          <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-90 fade-in">
+              Motivated BSc IT Student passionate about Cybersecurity, AI & Web Development. 
+              I thrive on challenging problems and building intelligent solutions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+              <a href="#projects" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                  View My Work
+              </a>
+              <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all transform hover:scale-105">
+                  Get In Touch
+              </a>
+              <a href="assets/resume.pdf" download
+                 class="bg-yellow-400 text-purple-800 px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all transform hover:scale-105">
+                  Download Resume
+              </a>
+          </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="text-6xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">My Journey</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a second-year BSc IT student passionate about technology's power to transform lives and businesses. 
+                        My journey blends academic pursuit with real-world experience, from BPO companies and private business 
+                        ventures to building custom web apps that drive operational efficiency.
+                    </p>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">💡 My Motivation</h4>
+                        <p class="text-purple-700 italic">
+                            "My drive comes from a desire to enhance and optimise existing technology—and to unravel the unknown."
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-6 fade-in">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg card-hover">
+                        <h4 class="font-semibold text-gray-800 mb-2">🎓 Education</h4>
+                        <p class="text-gray-600">BSc IT Student (2nd Year)</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg card-hover">
+                        <h4 class="font-semibold text-gray-800 mb-2">🏆 Experience</h4>
+                        <p class="text-gray-600">BPO Companies & Private Business Ventures</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg card-hover">
+                        <h4 class="font-semibold text-gray-800 mb-2">📚 Learning</h4>
+                        <p class="text-gray-600">Multiple Cybersecurity Certifications & ML Coursework</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg card-hover">
+                        <h4 class="font-semibold text-gray-800 mb-2">🌟 Philosophy</h4>
+                        <p class="text-gray-600 italic">"Know thy self."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Skills & Expertise</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">AI & Machine Learning</h3>
+                    <p class="text-gray-600 text-sm">Building intelligent applications and exploring ML algorithms</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Cybersecurity</h3>
+                    <p class="text-gray-600 text-sm">Network analysis, security protocols, and threat assessment</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Web Development</h3>
+                    <p class="text-gray-600 text-sm">Full-stack development with modern frameworks and tools</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-4xl mb-4">🐍</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Programming</h3>
+                    <p class="text-gray-600 text-sm">Python, C, and Natural Language Programming</p>
+                </div>
+            </div>
+            
+            <!-- Skill Bars -->
+            <div class="mt-16 grid md:grid-cols-2 gap-8 fade-in">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Technical Proficiency</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Python</span>
+                                <span class="text-gray-500">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Web Development</span>
+                                <span class="text-gray-500">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Cybersecurity</span>
+                                <span class="text-gray-500">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Soft Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Problem Solving</span>
+                                <span class="text-gray-500">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">System Optimization</span>
+                                <span class="text-gray-500">88%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Innovation</span>
+                                <span class="text-gray-500">92%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Minimalist code optimized for low-end PCs, fully functional offline capabilities, 
+                    and data backup features with CSV export/import functionality.
+                </p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="flex justify-center mb-12 fade-in">
+                <div class="bg-gray-100 p-2 rounded-lg">
+                    <button onclick="filterProjects('all')" class="filter-btn px-6 py-2 rounded-md font-medium transition-all bg-purple-600 text-white">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('web')" class="filter-btn px-6 py-2 rounded-md font-medium transition-all text-gray-600 hover:text-purple-600">
+                        Web Apps
+                    </button>
+                    <button onclick="filterProjects('desktop')" class="filter-btn px-6 py-2 rounded-md font-medium transition-all text-gray-600 hover:text-purple-600">
+                        Desktop Apps
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8" id="projects-container">
+                <!-- Storease Project -->
+                <div class="project-card project-item web p-8 rounded-lg shadow-lg card-hover fade-in">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Storease</h3>
+                        <div class="flex space-x-2">
+                            <a href="https://ramoware.github.io/storease" target="_blank" 
+                               class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600 transition-colors">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ramoware/storease" target="_blank" 
+                               class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm hover:bg-gray-900 transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-4xl mb-4">🏪</div>
+                    <p class="text-gray-600 mb-6">
+                        A comprehensive store management system with high-level CSS design. 
+                        Features inventory tracking, sales management, and beautiful responsive UI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Responsive</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">CSV Export</span>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        ✨ Fully functional • 📱 Mobile responsive • 💾 Offline capable
+                    </div>
+                </div>
+
+                <!-- Bliskin Project -->
+                <div class="project-card project-item web p-8 rounded-lg shadow-lg card-hover fade-in">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bliskin</h3>
+                        <div class="flex space-x-2">
+                            <a href="https://ramoware.github.io/bliskin" target="_blank" 
+                               class="bg-green-500 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600 transition-colors">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ramoware/bliskin" target="_blank" 
+                               class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm hover:bg-gray-900 transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-4xl mb-4">✨</div>
+                    <p class="text-gray-600 mb-6">
+                        An elegant skincare and beauty website with stunning visual design. 
+                        Features product showcases, interactive elements, and smooth animations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Animations</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Interactive</span>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        🎨 High-level CSS • 📱 Responsive design • ⚡ Fast loading
+                    </div>
+                </div>
+
+                <!-- Karigar Project -->
+                <div class="project-card project-item desktop p-8 rounded-lg shadow-lg card-hover fade-in">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Karigar</h3>
+                        <div class="flex space-x-2">
+                            <a href="https://github.com/ramoware/karigar" target="_blank" 
+                               class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm hover:bg-gray-900 transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-4xl mb-4">🔧</div>
+                    <p class="text-gray-600 mb-6">
+                        A craftsman management application optimized for low-end PCs. 
+                        Features worker tracking, project management, and data backup capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Desktop App</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">CSV Support</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Lightweight</span>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        💻 Low-end PC optimized • 📊 Data management • 💾 Backup features
+                    </div>
+                </div>
+
+                <!-- CA Project -->
+                <div class="project-card project-item desktop p-8 rounded-lg shadow-lg card-hover fade-in">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">CA Management</h3>
+                        <div class="flex space-x-2">
+                            <a href="https://github.com/ramoware/ca" target="_blank" 
+                               class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm hover:bg-gray-900 transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-4xl mb-4">📊</div>
+                    <p class="text-gray-600 mb-6">
+                        A chartered accountant management system with client tracking, 
+                        document management, and financial reporting capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Financial</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Reports</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Efficient</span>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        📈 Financial tracking • 👥 Client management • 📋 Report generation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Certifications</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600">Professional certifications that validate my expertise</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 fade-in">
+                <!-- NPTEL Certification -->
+                <div class="cert-badge text-white p-8 rounded-lg text-center card-hover">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold mb-2">Ethical Hacking</h3>
+                    <p class="text-white/90 mb-4">NPTEL - IIT Kharagpur</p>
+                    <div class="bg-white/20 px-4 py-2 rounded-full text-sm">
+                        Cybersecurity • Penetration Testing
+                    </div>
+                </div>
+
+                <!-- Cisco Certification -->
+                <div class="cert-badge text-white p-8 rounded-lg text-center card-hover">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-2">Introduction to Cybersecurity</h3>
+                    <p class="text-white/90 mb-4">Cisco Networking Academy</p>
+                    <div class="bg-white/20 px-4 py-2 rounded-full text-sm">
+                        Network Security • Protocols
+                    </div>
+                </div>
+
+                <!-- HackerRank Certification -->
+                <div class="cert-badge text-white p-8 rounded-lg text-center card-hover">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-2">Software Engineering</h3>
+                    <p class="text-white/90 mb-4">HackerRank</p>
+                    <div class="bg-white/20 px-4 py-2 rounded-full text-sm">
+                        Development • Best Practices
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl opacity-90">
+                    Ready to collaborate? Send me a message and let's build something amazing together!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                ✉️
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:ramdevsybscit@gmail.com" class="text-yellow-300 hover:text-yellow-200 transition-colors">
+                                    ramdevsybscit@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                🌐
+                            </div>
+                            <div>
+                                <p class="font-semibold">GitHub</p>
+                                <a href="https://github.com/ramoware" target="_blank" class="text-yellow-300 hover:text-yellow-200 transition-colors">
+                                    github.com/ramoware
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                💼
+                            </div>
+                            <div>
+                                <p class="font-semibold">Portfolio</p>
+                                <p class="text-yellow-300">Live projects available above</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg fade-in">
+                    <h3 class="text-xl font-bold mb-6">Send a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white/50 focus:bg-white/30 transition-all">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white/50 focus:bg-white/30 transition-all">
+                        </div>
+                        <div>
+                            <input type="text" name="subject" placeholder="Subject" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white/50 focus:bg-white/30 transition-all">
+                        </div>
+                        <div>
+                            <textarea name="message" placeholder="Your Message" rows="4" required
+                                      class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white/50 focus:bg-white/30 transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn"
+                                class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center justify-center">
+                            <span id="submit-text">Send Message</span>
+                            <div id="submit-spinner" class="loading-spinner ml-2 hidden"></div>
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">Ramoware</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Passionate about technology, cybersecurity, and building solutions that make a difference. 
+                    Always ready to tackle new challenges and explore the unknown.
+                </p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="mailto:ramdevsybscit@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="text-2xl">✉️</span>
+                </a>
+                <a href="https://github.com/ramoware" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="text-2xl">🌐</span>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400">
+                    © 2024 Ramoware. Built with passion and hosted on GitHub Pages.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+          <div class="flex justify-between items-center">
+              <div class="text-2xl font-bold text-gray-800">Ramoware</div>
+              <div class="hidden md:flex space-x-8">
+                  <a href="#home" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                  <a href="#about" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                  <a href="#skills" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">Skills</a>
+                  <a href="#projects" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">Projects</a>
+                  <a href="#certifications" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">Certifications</a>
+                  <a href="#contact" class="nav-link text-gray-600 hover:text-purple-600 transition-colors">Contact</a>
+              </div>
+              <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+              </button>
+          </div>
+          <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+              <a href="#home" class="nav-link block text-gray-600 hover:text-purple-600 py-2">Home</a>
+              <a href="#about" class="nav-link block text-gray-600 hover:text-purple-600 py-2">About</a>
+              <a href="#skills" class="nav-link block text-gray-600 hover:text-purple-600 py-2">Skills</a>
+              <a href="#projects" class="nav-link block text-gray-600 hover:text-purple-600 py-2">Projects</a>
+              <a href="#certifications" class="nav-link block text-gray-600 hover:text-purple-600 py-2">Certifications</a>
+              <a href="#contact" class="nav-link block text-gray-600 hover:text-purple-600 py-2">Contact</a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

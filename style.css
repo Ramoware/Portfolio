@@ -1,0 +1,18 @@
+body { font-family: 'Inter', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.typing-animation { border-right: 2px solid #667eea; animation: blink 0.5s infinite; }
+@keyframes blink { 0%, 50% { border-color: transparent; } 51%, 100% { border-color: #667eea; } }
+.skill-bar { background: linear-gradient(90deg, #667eea, #764ba2); animation: fillBar 2s ease-in-out; }
+@keyframes fillBar { from { width: 0%; } }
+.floating { animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.project-card { background: linear-gradient(145deg, #ffffff, #f0f0f0); border: 1px solid rgba(255,255,255,0.2); }
+.cert-badge { background: linear-gradient(145deg, #667eea, #764ba2); transform: scale(1); transition: transform 0.3s ease; }
+.cert-badge:hover { transform: scale(1.05); }
+.loading-spinner { border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
