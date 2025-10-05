@@ -48,31 +48,100 @@ function filterProjects(category) {
   });
 }
 
-// Contact form
-document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+// ====================================================
+// Contact Form Submission with Enhanced Error Handling
+// ====================================================
+const contactForm = document.getElementById('contact-form');
+contactForm?.addEventListener('submit', async function(e) {
   e.preventDefault();
+  
   const submitBtn = document.getElementById('submit-btn');
   const submitText = document.getElementById('submit-text');
   const submitSpinner = document.getElementById('submit-spinner');
   const messageDiv = document.getElementById('form-message');
-  submitText.textContent = 'Sending...'; submitSpinner.classList.remove('hidden'); submitBtn.disabled = true;
+
+  // Validate form inputs before submission
+  if (!validateForm()) {
+    showMessage(messageDiv, 'Please fill in all required fields correctly.', 'error');
+    return;
+  }
+
+  // Update UI for loading state
+  submitText.textContent = 'Sending...';
+  submitSpinner.classList.remove('hidden');
+  submitBtn.disabled = true;
+  messageDiv.classList.add('hidden');
+
+  // Prepare form data
   const formData = new FormData(this);
   const data = Object.fromEntries(formData.entries());
   data.timestamp = new Date().toISOString();
+  
+  // Add additional validation data
+  data.userAgent = navigator.userAgent;
+  data.referrer = document.referrer;
+
   try {
-    await fetch('https://script.google.com/macros/s/AKfycbyzOvMpTZkHNyvk05qqA2gNqfWeTm_gM-jTywIol4e3jIbXWEnxAEudsf1IszQ8uD4l/exec', {
-      method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+    console.log('Attempting to submit form data:', { 
+      ...data, 
+      email: data.email ? '***' : 'missing',
+      name: data.name ? '***' : 'missing'
     });
-    messageDiv.className = 'mt-4 text-center bg-green-100 text-green-800 p-3 rounded-lg';
-    messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
-  } catch {
-    messageDiv.className = 'mt-4 text-center bg-red-100 text-red-800 p-3 rounded-lg';
-    messageDiv.textContent = 'Error sending your message. Please email me directly.';
+
+    // Enhanced fetch with timeout and better error handling
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+    const response = await fetch('https://script.google.com/macros/s/AKfycbyzOvMpTZkHNyvk05qqA2gNqfWeTm_gM-jTywIol4e3jIbXWEnxAEudsf1IszQ8uD4l/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(data),
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+
+    // Since we're using 'no-cors', we can't read the response
+    // But we can assume success if no network error occurred
+    console.log('Form submitted successfully');
+    showMessage(messageDiv, 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
+    
+    // Optional: Track successful submission
+    trackFormSubmission('success');
+
+  } catch (error) {
+    console.error('Form submission error:', error);
+    
+    let errorMessage = 'Error sending your message. Please email me directly at ramdevsybscit@gmail.com';
+    
+    if (error.name === 'AbortError') {
+      errorMessage = 'Request timed out. Please check your connection and try again.';
+    } else if (error.name === 'TypeError') {
+      errorMessage = 'Network error. Please check your internet connection.';
+    } else if (error.name === 'SyntaxError') {
+      errorMessage = 'There was an error processing your request. Please try again.';
+    }
+
+    showMessage(messageDiv, errorMessage, 'error');
+    
+    // Track failed submission
+    trackFormSubmission('error', error.message);
+    
+  } finally {
+    // Reset UI state
+    submitText.textContent = 'Send Message';
+    submitSpinner.classList.add('hidden');
+    submitBtn.disabled = false;
+    
+    // Only reset form on success
+    if (messageDiv.className.includes('bg-green-100')) {
+      this.reset();
+    }
   }
-  messageDiv.classList.remove('hidden');
-  this.reset();
-  submitText.textContent = 'Send Message'; submitSpinner.classList.add('hidden'); submitBtn.disabled = false;
-  setTimeout(()=> messageDiv.classList.add('hidden'), 5000);
 });
 
 // Resume download (simplified)
