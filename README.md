@@ -1,6 +1,19 @@
 # 👋 Hi, I’m Ramdev!
 
+
 **Motivated BSc IT Student | Cybersecurity Enthusiast | AI & Web Developer**
+
+---
+<p align="center">
+  
+<img src="https://img.shields.io/badge/GitHub-Ramoware-181717?logo=github&logoColor=white" alt="GitHub" />
+<img src="https://img.shields.io/github/followers/Ramoware?label=Followers&style=social" alt="GitHub Followers" />
+<img src="https://img.shields.io/github/stars/Ramoware?style=social" alt="GitHub Stars" />
+<img src="https://img.shields.io/github/commit-activity/m/Ramoware/ML-Learning?style=flat-square" alt=:"Commits" />
+<img src="https://img.shields.io/badge/Email-ramdevsybscit@gmail.com-D14836?logo=gmail&logoColor=white" alt="Email" />
+<img src="https://img.shields.io/badge/LinkedIn-Ramdev-blue?logo=linkedin&logoColor=white" alt="LinkedIn" />
+
+</p>
 
 ---
 
@@ -35,7 +48,7 @@ I thrive on challenging problems, optimising systems, and exploring the unknown�
 
 ## ✉️ Connect with Me
 
-- **Email:** ramdevsybscit@gmail.com
+- **Email:** ramoware@gmail.com
 
 ## 💡 Favorite Quote
 
